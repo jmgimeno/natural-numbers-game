@@ -1,0 +1,10 @@
+name = "natural-numbers-game"
+version = "0.1.0"
+defaultTargets = ["natural-numbers-game"]
+
+[[lean_lib]]
+name = "NaturalNumbersGame"
+
+[[lean_exe]]
+name = "natural-numbers-game"
+root = "Main"
