@@ -14,16 +14,15 @@ example (x y : MyNat) (h: y = x + 7): 2 * y = 2 * (x + 7) := by
   rw [h]
 
 example : 2 = succ (succ 0) := by
-  rw [two_eq_succ_one, one_eq_succ_zero] -- or rfl
+  rw [two_eq_succ_one, one_eq_succ_zero]
+
 
 example (a b c : MyNat) : a + (b + 0) + (c + 0) = a + b + c := by
   repeat rewrite [add_zero] -- rfl can apply definition of + 0
   rfl
 
 theorem succ_eq_add_one (n: MyNat) : succ n = n + 1 := by
-  rewrite [one_eq_succ_zero] -- rfl can do it, but we want to show how to use rw
-  rewrite [add_succ]
-  rw [add_zero]
+  rw [one_eq_succ_zero,add_succ, ← zero_eq_0, add_zero]
 
 example : 2 + 2 = (4 : MyNat) := by
   rewrite [four_eq_succ_three, three_eq_succ_two]
