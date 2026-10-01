@@ -1,3 +1,5 @@
+-- Our definition of natural numbers
+
 inductive MyNat where
   | zero : MyNat
   | succ : MyNat → MyNat
