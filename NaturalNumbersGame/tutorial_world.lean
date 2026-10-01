@@ -15,6 +15,7 @@ example (x y : MyNat) (h: y = x + 7): 2 * y = 2 * (x + 7) := by
 
 example : 2 = succ (succ 0) := by
   rw [two_eq_succ_one, one_eq_succ_zero]
+  rfl
 
 
 example (a b c : MyNat) : a + (b + 0) + (c + 0) = a + b + c := by
@@ -22,7 +23,7 @@ example (a b c : MyNat) : a + (b + 0) + (c + 0) = a + b + c := by
   rfl
 
 theorem succ_eq_add_one (n: MyNat) : succ n = n + 1 := by
-  rw [one_eq_succ_zero,add_succ, ← zero_eq_0, add_zero]
+  rw [one_eq_succ_zero,add_succ, zero_eq_0, add_zero]
 
 example : 2 + 2 = (4 : MyNat) := by
   rewrite [four_eq_succ_three, three_eq_succ_two]
