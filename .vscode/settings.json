@@ -3,6 +3,7 @@
         "mynat",
         "occs",
         "Repr",
-        "succ"
+        "succ",
+        "symm"
     ]
 }
