@@ -33,3 +33,16 @@ instance : Mul MyNat where
   mul := mul
 
 example : mul 3 4 = 12 := by rfl
+
+def pow (m : MyNat) (n : MyNat) : MyNat :=
+  match n with
+  | zero => succ zero
+  | succ n' => mul m (pow m n')
+
+example : pow 2 4 = 16 := by rfl
+
+@[default_instance]
+instance : Pow MyNat MyNat where
+  pow := pow
+
+example : (2 : MyNat) ^ (4 : MyNat) = (16 : MyNat) := by rfl
