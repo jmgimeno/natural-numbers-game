@@ -1,6 +1,4 @@
 import NaturalNumbersGame.MyNat
-import NaturalNumbersGame.Numbers
-import NaturalNumbersGame.Power
 import NaturalNumbersGame.multiplication_world
 
 open MyNat

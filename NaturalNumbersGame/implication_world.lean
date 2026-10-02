@@ -1,5 +1,4 @@
 import NaturalNumbersGame.MyNat
-import NaturalNumbersGame.Numbers
 import NaturalNumbersGame.tutorial_world
 import NaturalNumbersGame.addition_world
 

@@ -23,6 +23,5 @@ theorem add_assoc (a b c : MyNat) : a + b + c = a + (b + c) := by
   | zero => rfl
   | succ c' ih => rw [add_succ, ih, add_succ, add_succ]
 
-
 theorem add_right_comm (a b c : MyNat) : (a + b) + c = (a + c) + b := by
   rw [add_assoc, add_assoc, add_comm b]

@@ -1,6 +1,4 @@
 import NaturalNumbersGame.MyNat
-import NaturalNumbersGame.Numbers
-import NaturalNumbersGame.Addition
 
 open MyNat
 
