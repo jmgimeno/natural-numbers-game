@@ -118,3 +118,10 @@ instance instDecidableEq : DecidableEq MyNat
     intro h2
     apply h
     injection h2
+
+-- Less-than-or-equal
+
+def le (a b : MyNat) : Prop := ∃ c : MyNat, b = a + c
+
+instance : LE MyNat where
+  le := le
